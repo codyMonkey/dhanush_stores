@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" >
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dhanush store</title>
+
+    <script>
+        document.documentElement.classList.remove('no-js');
+        document.documentElement.classList.add('js');
+    </script>
+
+    <!-- CSS
+    ================================================== -->
+
+    <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="css/vendor.css">
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+
+    <style>
+.intro-header__big-type {
+    opacity: 1 !important;
+    visibility: visible !important;
+    color: rgb(255, 255, 255) !important;
+    display: block !important;
+}
+.s-header {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+</style>
+
+<style>
+.intro-header {
+    text-align: center;
+    margin-top: 80px !important;
+}
+
+.intro-header__big-type {
+    font-size: 60px !important;
+    margin-bottom: 10px !important;
+}
+
+.intro-header h3 {
+    font-size: 20px !important;
+    margin-top: 0 !important;
+}
+
+.s-intro__content {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+</style>
+
+</head>
+
+
+<body id="top">
+    
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- page wrap
+    ================================================== -->
+<div id="page" class="s-pagewrap ss-home">
+
+    <!-- # site header -->
+    <header class="s-header">
+
+        <div class="container s-header__content">
+            
+            <div class="s-header__block">
+                <div class="header-logo">
+                    <a class="logo" href="index.html">
+                        <img src="images/logo.svg" alt="Homepage">
+                    </a>
+                </div>
+
+                <a class="header-menu-toggle" href="#0">
+                    <span>Menu</span>
+                </a>
+            </div>
+        
+            <nav class="header-nav">    
+                <ul class="header-nav__links">
+                    <li class="current">
+                        <a class="smoothscroll" href="#intro">Intro</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#menu">Menu</a>
+                    </li>
+                    <li>
+                        <a class="smoothscroll" href="#cart">Cart</a>
+                    </li>
+                </ul>  
+                
+                <div class="header-contact">
+                    <a href="tel:+918341880056" class="header-contact__num btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" width="24" height="24">
+                            <path fill="none" stroke="currentColor" stroke-miterlimit="10" d="M19.64,21.25c-2.54,2.55-8.38.83-13-3.84S.2,6.9,2.75,4.36L5.53,1.57,10.9,6.94l-2,2A2.18,2.18,0,0,0,8.9,12L12,15.1a2.18,2.18,0,0,0,3.07,0l2-2,5.37,5.37Z"></path>
+                        </svg>
+                        8341880056
+                    </a>
+                </div>
+
+            </nav>     
+
+        </div>
+
+    </header>
+
+
+<!-- INTRO -->
+
+<section id="intro" class="s-intro">
+
+    <div class="intro-container">
+
+        <div class="intro-text">
+            <p class="intro-overline">Welcome to</p>
+
+            <h1 class="intro-title">
+                DHANUSH
+            </h1>
+
+            <h3 class="intro-subtitle">
+                Snacks and Sweets
+            </h3>
+
+            <p class="intro-description">
+                a place where tradition meets taste.
+            </p>
+        </div>
+
+        <div class="intro-socials">
+            <a href="#">FB</a>
+            <a href="#">IG</a>
+            <a href="#">PI</a>
+            <a href="#">X</a>
+        </div>
+
+    </div>
+
+    </section>
+
+<!-- # menu -->
+<section id="menu" class="container s-menu target-section">
+
+
+<div class="row s-menu__content">
+
+<!-- LEFT SIDE -->
+<div class="menu-top">
+
+    <h2 style="text-align:center;">Our Menu</h2>
+
+    <div class="menu-tabs">
+        <button onclick="showTab('fried')">Fried</button>
+        <button onclick="showTab('light')">Light</button>
+        <button onclick="showTab('laddus')">Laddus</button>
+        <button onclick="showTab('sweets')">Sweets</button>
+        <button onclick="showTab('traditional')">Specials</button>
+        <button onclick="showTab('podis')">Podis</button>
+    </div>
+
+</div>
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+
+<div>
+
+<div id="fried" class="menu-tab">
+
+<h3>Fried Snacks (50g)</h3>
+
+<div class="menu-item">
+Murukku - ₹15
+<button onclick="changeQty('Murukku',15,50,-1)">-</button>
+<span id="Murukku-qty">0</span>
+<button onclick="changeQty('Murukku',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Karapoosa / Sev - ₹15
+<button onclick="changeQty('Karapoosa',15,50,-1)">-</button>
+<span id="Karapoosa-qty">0</span>
+<button onclick="changeQty('Karapoosa',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Appalu / Chekkalu - ₹15
+<button onclick="changeQty('Appalu',15,50,-1)">-</button>
+<span id="Appalu-qty">0</span>
+<button onclick="changeQty('Appalu',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Mixer - ₹15
+<button onclick="changeQty('Mixer',15,50,-1)">-</button>
+<span id="Mixer-qty">0</span>
+<button onclick="changeQty('Mixer',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Boondi - ₹15
+<button onclick="changeQty('Boondi',15,50,-1)">-</button>
+<span id="Boondi-qty">0</span>
+<button onclick="changeQty('Boondi',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Sakinalu - ₹18
+<button onclick="changeQty('Sakinalu',18,50,-1)">-</button>
+<span id="Sakinalu-qty">0</span>
+<button onclick="changeQty('Sakinalu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Karam Gavvalu - ₹15
+<button onclick="changeQty('Karam Gavvalu',15,50,-1)">-</button>
+<span id="Karam Gavvalu-qty">0</span>
+<button onclick="changeQty('Karam Gavvalu',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Star Murukku - ₹15
+<button onclick="changeQty('Star Murukku',15,50,-1)">-</button>
+<span id="Star Murukku-qty">0</span>
+<button onclick="changeQty('Star Murukku',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ribbon Murukku - ₹15
+<button onclick="changeQty('Ribbon Murukku',15,50,-1)">-</button>
+<span id="Ribbon Murukku-qty">0</span>
+<button onclick="changeQty('Ribbon Murukku',15,50,1)">+</button>
+</div>
+
+</div>
+
+</div>
+
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+ <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+  <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+   <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+
+   <div id="light" class="menu-tab" style="display:none;">
+
+<h3>Light Snacks (Per Kg)</h3>
+
+<div class="menu-item">
+Corn Chuduva - ₹15
+<button onclick="changeQty('Corn Chuduva',15,50,-1)">-</button>
+<span id="Corn Chuduva-qty">0</span>
+<button onclick="changeQty('Corn Chuduva',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Atukula Chuduva - ₹15
+<button onclick="changeQty('Atukula Chuduva',15,50,-1)">-</button>
+<span id="Atukula Chuduva-qty">0</span>
+<button onclick="changeQty('Atukula Chuduva',15,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Murmura Chuduva - ₹15
+<button onclick="changeQty('Murmura Chuduva',15,50,-1)">-</button>
+<span id="Murmura Chuduva-qty">0</span>
+<button onclick="changeQty('Murmura Chuduva',15,50,1)">+</button>
+</div>
+
+</div>
+
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+ <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+  <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+   <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+<div id="traditional" class="menu-tab" style="display:none;">
+
+<h3>Traditional Specials (50g)</h3>
+
+<div class="menu-item">
+Ariselu - ₹18
+<button onclick="changeQty('Ariselu',18,50,-1)">-</button>
+<span id="Ariselu-qty">0</span>
+<button onclick="changeQty('Ariselu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ghee Ariselu - ₹28
+<button onclick="changeQty('Ghee Ariselu',28,50,-1)">-</button>
+<span id="Ghee Ariselu-qty">0</span>
+<button onclick="changeQty('Ghee Ariselu',28,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Sunnundalu (Sugar/Bellam) - ₹28
+<button onclick="changeQty('Sunnundalu',28,50,-1)">-</button>
+<span id="Sunnundalu-qty">0</span>
+<button onclick="changeQty('Sunnundalu',28,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Kajjikayalu / Garjalu - ₹18
+<button onclick="changeQty('Kajjikayalu',18,50,-1)">-</button>
+<span id="Kajjikayalu-qty">0</span>
+<button onclick="changeQty('Kajjikayalu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Kova Garjalu - ₹28
+<button onclick="changeQty('Kova Garjalu',28,50,-1)">-</button>
+<span id="Kova Garjalu-qty">0</span>
+<button onclick="changeQty('Kova Garjalu',28,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Bhakshyalu (Bobbatlu) - ₹23
+<button onclick="changeQty('Bhakshyalu',23,50,-1)">-</button>
+<span id="Bhakshyalu-qty">0</span>
+<button onclick="changeQty('Bhakshyalu',23,50,1)">+</button>
+</div>
+
+</div>
+
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+ <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+  <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+   <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+
+   
+<div id="laddus" class="menu-tab" style="display:none;">
+
+<h3>Laddus (50g)</h3>
+
+<div class="menu-item">
+Boondi Laddu - ₹20
+<button onclick="changeQty('Boondi Laddu',20,50,-1)">-</button>
+<span id="Boondi Laddu-qty">0</span>
+<button onclick="changeQty('Boondi Laddu',20,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Nuvvula Laddu - ₹18
+<button onclick="changeQty('Nuvvula Laddu',18,50,-1)">-</button>
+<span id="Nuvvula Laddu-qty">0</span>
+<button onclick="changeQty('Nuvvula Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Palli Laddu - ₹18
+<button onclick="changeQty('Palli Laddu',18,50,-1)">-</button>
+<span id="Palli Laddu-qty">0</span>
+<button onclick="changeQty('Palli Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Mixed Laddu - ₹18
+<button onclick="changeQty('Mixed Laddu',18,50,-1)">-</button>
+<span id="Mixed Laddu-qty">0</span>
+<button onclick="changeQty('Mixed Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Putnala Laddu - ₹18
+<button onclick="changeQty('Putnala Laddu',18,50,-1)">-</button>
+<span id="Putnala Laddu-qty">0</span>
+<button onclick="changeQty('Putnala Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ragi Laddu (Sugar/Bellam) - ₹18
+<button onclick="changeQty('Ragi Laddu',18,50,-1)">-</button>
+<span id="Ragi Laddu-qty">0</span>
+<button onclick="changeQty('Ragi Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Flaxseed Laddu (Bellam) - ₹18
+<button onclick="changeQty('Flaxseed Laddu',18,50,-1)">-</button>
+<span id="Flaxseed Laddu-qty">0</span>
+<button onclick="changeQty('Flaxseed Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Multigrain Laddu - ₹25
+<button onclick="changeQty('Multigrain Laddu',25,50,-1)">-</button>
+<span id="Multigrain Laddu-qty">0</span>
+<button onclick="changeQty('Multigrain Laddu',25,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ravva Laddu - ₹18
+<button onclick="changeQty('Ravva Laddu',18,50,-1)">-</button>
+<span id="Ravva Laddu-qty">0</span>
+<button onclick="changeQty('Ravva Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Besan Laddu - ₹25
+<button onclick="changeQty('Besan Laddu',25,50,-1)">-</button>
+<span id="Besan Laddu-qty">0</span>
+<button onclick="changeQty('Besan Laddu',25,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Coconut Laddu (Sugar/Bellam) - ₹18
+<button onclick="changeQty('Coconut Laddu',18,50,-1)">-</button>
+<span id="Coconut Laddu-qty">0</span>
+<button onclick="changeQty('Coconut Laddu',18,50,1)">+</button>
+</div>
+
+</div>
+
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+ <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+  <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+   <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+
+   <div id="sweets" class="menu-tab" style="display:none;">
+
+<h3>Sweet Snacks (50g)</h3>
+
+<div class="menu-item">
+Sweet Gavvalu (Sugar/Bellam) - ₹18
+<button onclick="changeQty('Sweet Gavvalu',18,50,-1)">-</button>
+<span id="Sweet Gavvalu-qty">0</span>
+<button onclick="changeQty('Sweet Gavvalu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Boondi Laddu - ₹20
+<button onclick="changeQty('Boondi Laddu',20,50,-1)">-</button>
+<span id="Boondi Laddu-qty">0</span>
+<button onclick="changeQty('Boondi Laddu',20,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ravva Laddu - ₹18
+<button onclick="changeQty('Ravva Laddu',18,50,-1)">-</button>
+<span id="Ravva Laddu-qty">0</span>
+<button onclick="changeQty('Ravva Laddu',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Besan Laddu - ₹25
+<button onclick="changeQty('Besan Laddu',25,50,-1)">-</button>
+<span id="Besan Laddu-qty">0</span>
+<button onclick="changeQty('Besan Laddu',25,50,1)">+</button>
+</div>
+
+</div>
+
+<!-- # ------------------------------------------------------------------------------------------------------------menu -->
+ <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+  <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+   <!-- # ------------------------------------------------------------------------------------------------------------menu -->
+
+
+
+   <div id="podis" class="menu-tab" style="display:none;">
+
+<h3>Podis (50g)</h3>
+
+<div class="menu-item">
+Karivepaku Podi - ₹18
+<button onclick="changeQty('Karivepaku Podi',18,50,-1)">-</button>
+<span id="Karivepaku Podi-qty">0</span>
+<button onclick="changeQty('Karivepaku Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Kakarakaya Podi - ₹18
+<button onclick="changeQty('Kakarakaya Podi',18,50,-1)">-</button>
+<span id="Kakarakaya Podi-qty">0</span>
+<button onclick="changeQty('Kakarakaya Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Idly / Dosa Podi - ₹18
+<button onclick="changeQty('Idly Dosa Podi',18,50,-1)">-</button>
+<span id="Idly Dosa Podi-qty">0</span>
+<button onclick="changeQty('Idly Dosa Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Nalla Karam - ₹18
+<button onclick="changeQty('Nalla Karam',18,50,-1)">-</button>
+<span id="Nalla Karam-qty">0</span>
+<button onclick="changeQty('Nalla Karam',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Munaga Aku Podi - ₹18
+<button onclick="changeQty('Munaga Aku Podi',18,50,-1)">-</button>
+<span id="Munaga Aku Podi-qty">0</span>
+<button onclick="changeQty('Munaga Aku Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Nuvvula Podi - ₹18
+<button onclick="changeQty('Nuvvula Podi',18,50,-1)">-</button>
+<span id="Nuvvula Podi-qty">0</span>
+<button onclick="changeQty('Nuvvula Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Palli Podi - ₹18
+<button onclick="changeQty('Palli Podi',18,50,-1)">-</button>
+<span id="Palli Podi-qty">0</span>
+<button onclick="changeQty('Palli Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Putnala Podi - ₹18
+<button onclick="changeQty('Putnala Podi',18,50,-1)">-</button>
+<span id="Putnala Podi-qty">0</span>
+<button onclick="changeQty('Putnala Podi',18,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Avisa Podi - ₹16
+<button onclick="changeQty('Avisa Podi',16,50,-1)">-</button>
+<span id="Avisa Podi-qty">0</span>
+<button onclick="changeQty('Avisa Podi',16,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Gaddi Nuvvula Podi - ₹16
+<button onclick="changeQty('Gaddi Nuvvula Podi',16,50,-1)">-</button>
+<span id="Gaddi Nuvvula Podi-qty">0</span>
+<button onclick="changeQty('Gaddi Nuvvula Podi',16,50,1)">+</button>
+</div>
+
+<div class="menu-item">
+Ellipaya Podi - ₹18
+<button onclick="changeQty('Ellipaya Podi',18,50,-1)">-</button>
+<span id="Ellipaya Podi-qty">0</span>
+<button onclick="changeQty('Ellipaya Podi',18,50,1)">+</button>
+</div>
+
+</div>
+
+</div>
+
+</section>.
+
+
+
+
+<section id="cart" class="container">
+
+<h2 style="text-align:center;">Your Cart 🛒</h2>
+
+<div id="cart-items" style="text-align:center;"></div>
+
+<h3 id="cart-total" style="text-align:center;">
+Total: ₹0 | Weight: 0g
+</h3>
+
+<div style="text-align:center;">
+<button onclick="orderNow()" style="padding:15px;background:green;color:white;">
+Order on WhatsApp
+</button>
+</div>
+
+</section>
+
+<script>
+
+    let cart = {};
+
+
+function changeQty(name, price, weight, change) {
+
+    if (!cart[name]) {
+        cart[name] = {price: price, qty: 0, weight: weight};
+    }
+
+    cart[name].qty += change;
+
+    if (cart[name].qty <= 0) {
+        delete cart[name];
+    }
+
+    updateCart();
+}
+
+function updateCart() {
+
+    let cartDiv = document.getElementById("cart-items");
+    let total = 0;
+    let totalWeight = 0;
+
+    cartDiv.innerHTML = "";
+
+    for (let item in cart) {
+
+        let qty = cart[item].qty;
+        let price = cart[item].price;
+        let weight = cart[item].weight;
+
+        let itemTotal = qty * price;
+        let itemWeight = qty * weight;
+
+        total += itemTotal;
+        totalWeight += itemWeight;
+
+        cartDiv.innerHTML += `
+        <p>${item} x${qty} = ₹${itemTotal} (${itemWeight}${weight==1?' pcs':'g'})</p>
+        `;
+
+        let qtyElement = document.getElementById(item + "-qty");
+        if (qtyElement) qtyElement.innerText = qty;
+    }
+
+    document.getElementById("cart-total").innerText =
+        `Total: ₹${total} | Weight: ${totalWeight}${totalWeight<100?' pcs':'g'}`;
+}
+
+function orderNow() {
+
+    if (Object.keys(cart).length === 0) {
+        alert("Cart empty bro");
+        return;
+    }
+
+    let message = "Hi, I want to order:\n\n";
+    let total = 0;
+    let totalWeight = 0;
+
+    for (let item in cart) {
+
+        let qty = cart[item].qty;
+        let price = cart[item].price;
+        let weight = cart[item].weight;
+
+        let itemTotal = qty * price;
+        let itemWeight = qty * weight;
+
+        total += itemTotal;
+        totalWeight += itemWeight;
+
+        message += `${item} x${qty} = ₹${itemTotal} (${itemWeight}${weight==1?' pcs':'g'})\n`;
+    }
+
+    message += `\nTotal: ₹${total}`;
+    message += `\nTotal Weight: ${totalWeight}${totalWeight<100?' pcs':'g'}`;
+
+    let phone = "918341880056";
+
+    let url = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
+}
+
+// TAB SWITCH
+function showTab(tab) {
+    document.querySelectorAll('.menu-tab').forEach(el => el.style.display = 'none');
+    document.getElementById(tab).style.display = 'block';
+}
+
+window.addEventListener("load", function () {
+    document.getElementById("preloader").style.display = "none";
+});
+
+</script>
+        </div>
+    </div>
+
+</section>
+
+
+      
+
+            <div class="row s-footer__main">             
+                <div class="column xl-3 lg-12 footer-block s-footer__main-start">     
+
+                  
+
+                </div> <!-- end s-footer__main-start -->
+                
+
+                <div class="column xl-9 lg-12 s-footer__main-end grid-cols grid-cols--wrap">
+
+                    <div class="grid-cols__column footer-block">
+                        <h6>Location</h6>
+                        <p>
+                        beside mahalasa nilaya, Shilpa Nagar Rd, Shilpa Nagar, Nagaram, Secunderabad, Telangana 500083
+                        </p>
+                    </div>
+                    
+                    <div class="grid-cols__column footer-block">     
+                        <h6>Contacts</h6>
+                        <ul class="link-list">
+                            <li><a href="tel:+918341880056">+91 83418 80056</a></li>
+                        </ul> 
+                    </div>
+                    
+                  
+
+                </div> <!-- s-footer__main-end -->                  
+
+            </div> <!-- end  s-footer__main-content -->                 
+            
+       
+
+            <div class="ss-go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top">                 
+                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero"/></svg>
+                </a>                                
+                <span>Back To Top</span>   
+            </div> <!-- end ss-go-top -->
+            
+        </footer> <!-- end s-footer -->
+
+    </div> <!-- end page-wrap -->
+x
+
+
+   </body>
+   </html>
